@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VLS Tech | IT Training & Networking</title>
+
+  <title>VLS Tech | IT Training</title>
 
   <style>
     * {
@@ -14,141 +15,130 @@
     }
 
     body {
-      background: #f4f7fb;
-      color: #172033;
-      line-height: 1.6;
+      background: #f4f7fc;
+      color: #111827;
     }
 
     header {
-      background: #071a3d;
+      background: #071b49;
       color: white;
-      padding: 20px;
+      padding: 45px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 32px;
-      margin-bottom: 5px;
+      font-size: 42px;
+      margin-bottom: 12px;
     }
 
     header p {
-      color: #b9d9ff;
+      font-size: 19px;
     }
 
     .hero {
-      background: linear-gradient(135deg, #071a3d, #0066cc);
-      color: white;
       text-align: center;
-      padding: 70px 20px;
+      padding: 45px 20px;
     }
 
     .hero h2 {
-      font-size: 38px;
+      color: #071b49;
+      font-size: 34px;
       margin-bottom: 15px;
     }
 
     .hero p {
       font-size: 18px;
+      line-height: 1.6;
       max-width: 700px;
       margin: auto;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 25px;
-      background: #25d366;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 50px 20px;
-    }
-
-    .title {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #071a3d;
-      font-size: 30px;
-    }
-
     .courses {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
+      max-width: 1000px;
+      margin: 20px auto 50px;
+      padding: 0 20px;
     }
 
     .course {
       background: white;
       padding: 30px 20px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      border-radius: 15px;
       text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     }
 
     .course h3 {
-      color: #0066cc;
+      color: #071b49;
       margin-bottom: 10px;
-      font-size: 22px;
     }
 
     .registration {
-      background: white;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
       max-width: 650px;
-      margin: auto;
+      margin: 0 auto 60px;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    }
+
+    .registration h2 {
+      text-align: center;
+      color: #071b49;
+      font-size: 32px;
+      margin-bottom: 25px;
     }
 
     input, select {
       width: 100%;
-      padding: 14px;
-      margin: 8px 0 15px;
+      padding: 18px;
+      margin-bottom: 18px;
       border: 1px solid #ccc;
-      border-radius: 7px;
-      font-size: 16px;
+      border-radius: 10px;
+      font-size: 17px;
     }
 
     button {
       width: 100%;
-      padding: 15px;
-      border: none;
-      border-radius: 8px;
-      background: #25d366;
+      padding: 18px;
+      background: #20c969;
       color: white;
-      font-size: 17px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
       font-weight: bold;
       cursor: pointer;
     }
 
+    button:hover {
+      background: #16a85a;
+    }
+
     .contact {
-      text-align: center;
-      background: #071a3d;
+      background: #071b49;
       color: white;
+      text-align: center;
       padding: 45px 20px;
     }
 
     .contact h2 {
-      margin-bottom: 15px;
+      font-size: 32px;
+      margin-bottom: 20px;
     }
 
-    .contact a {
-      color: #25d366;
-      text-decoration: none;
-      font-weight: bold;
+    .contact p {
+      font-size: 17px;
+      margin: 10px;
     }
 
     footer {
-      background: #041027;
-      color: #aaa;
+      background: #04122f;
+      color: white;
       text-align: center;
       padding: 20px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -156,99 +146,87 @@
 <body>
 
   <header>
-    <h1>VLS TECH</h1>
-    <p>IT Training & Networking Solutions</p>
+    <h1>VLS Tech</h1>
+    <p>Professional IT Training & Technology Solutions</p>
   </header>
 
-  <div class="hero">
-    <h2>Build Your Future in IT</h2>
+  <section class="hero">
+    <h2>Build Your Future With Technology</h2>
     <p>
-      Learn professional networking skills and gain practical knowledge
-      through our CCNA and MikroTik training programs.
+      Learn practical and career-focused IT skills from VLS Tech.
+      Start your journey in networking, artificial intelligence,
+      programming and web development.
     </p>
-
-    <a class="btn" href="#registration">Register Now</a>
-  </div>
-
-  <section>
-    <h2 class="title">Our Training Programs</h2>
-
-    <div class="courses">
-
-      <div class="course">
-        <h3>CCNA Training</h3>
-        <p>
-          Learn networking fundamentals, IP addressing, routing,
-          switching, network security and Cisco technologies.
-        </p>
-      </div>
-
-      <div class="course">
-        <h3>MikroTik Training</h3>
-        <p>
-          Learn MikroTik RouterOS, routing, wireless networking,
-          bandwidth management and network configuration.
-        </p>
-      </div>
-
-      <div class="course">
-        <h3>Practical Networking</h3>
-        <p>
-          Develop hands-on networking skills and prepare yourself
-          for real-world IT and networking opportunities.
-        </p>
-      </div>
-
-    </div>
   </section>
 
-  <section id="registration">
+  <section class="courses">
 
-    <h2 class="title">Student Registration</h2>
+    <div class="course">
+      <h3>CCNA Training</h3>
+      <p>Learn networking fundamentals, Cisco technologies and network configuration.</p>
+    </div>
 
-    <div class="registration">
+    <div class="course">
+      <h3>MikroTik Training</h3>
+      <p>Learn MikroTik routing, configuration, wireless networking and network management.</p>
+    </div>
 
-      <form onsubmit="registerWhatsApp(); return false;">
+    <div class="course">
+      <h3>AI & Programming</h3>
+      <p>Learn programming concepts and practical Artificial Intelligence skills.</p>
+    </div>
 
-        <input
-          type="text"
-          id="name"
-          placeholder="Full Name"
-          required
-        >
-
-        <input
-          type="tel"
-          id="phone"
-          placeholder="Phone Number"
-          required
-        >
-
-        <input
-          type="email"
-          id="email"
-          placeholder="Email Address"
-          required
-        >
-
-        <select id="course" required>
-          <option value="">Select Training</option>
-          <option value="CCNA Training">CCNA Training</option>
-          <option value="MikroTik Training">MikroTik Training</option>
-          <option value="Practical Networking">Practical Networking</option>
-        </select>
-
-        <button type="submit">
-          Register via WhatsApp
-        </button>
-
-      </form>
-
+    <div class="course">
+      <h3>Web Development</h3>
+      <p>Learn how to build modern websites using HTML, CSS, JavaScript and more.</p>
     </div>
 
   </section>
 
-  <div class="contact">
+  <section class="registration">
+
+    <h2>Student Registration</h2>
+
+    <form id="registrationForm">
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Full Name"
+        required
+      >
+
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Phone Number"
+        required
+      >
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Email Address"
+        required
+      >
+
+      <select id="course" required>
+        <option value="">Select Training</option>
+        <option value="CCNA Training">CCNA Training</option>
+        <option value="MikroTik Training">MikroTik Training</option>
+        <option value="AI & Programming">AI & Programming</option>
+        <option value="Web Development">Web Development</option>
+      </select>
+
+      <button type="submit">
+        Register via WhatsApp
+      </button>
+
+    </form>
+
+  </section>
+
+  <section class="contact">
 
     <h2>Contact VLS Tech</h2>
 
@@ -258,25 +236,25 @@
 
     <p>📍 Mission Road, opposite Emokpae</p>
 
-    <a href="https://wa.me/2349042869455">
-      Chat with us on WhatsApp
-    </a>
-
-  </div>
+  </section>
 
   <footer>
-    <p>© 2026 VLS Tech. All Rights Reserved.</p>
+    © 2026 VLS Tech. All Rights Reserved.
   </footer>
 
+
   <script>
-    function registerWhatsApp() {
 
-      var name = document.getElementById("name").value;
-      var phone = document.getElementById("phone").value;
-      var email = document.getElementById("email").value;
-      var course = document.getElementById("course").value;
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
 
-      var message =
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value;
+      const course = document.getElementById("course").value;
+
+      const message =
         "Hello VLS Tech,%0A%0A" +
         "I want to register for training.%0A%0A" +
         "Name: " + encodeURIComponent(name) + "%0A" +
@@ -284,11 +262,15 @@
         "Email: " + encodeURIComponent(email) + "%0A" +
         "Training: " + encodeURIComponent(course);
 
-      window.open(
-        "https://wa.me/2349042869455?text=" + message,
-        "_blank"
-      );
-    }
+      const whatsappNumber = "2349042869455";
+
+      const whatsappURL =
+        "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+      window.open(whatsappURL, "_blank");
+
+    });
+
   </script>
 
 </body>
