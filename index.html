@@ -4,212 +4,151 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>VLSTECH - IT Training & Technology</title>
+  <title>VLSTech - Technology Training</title>
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
+      font-family: Arial, sans-serif;
       min-height: 100vh;
-      color: #ffffff;
-      background:
-        radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.35), transparent 30%),
-        radial-gradient(circle at 90% 10%, rgba(255, 0, 128, 0.35), transparent 30%),
-        radial-gradient(circle at 50% 90%, rgba(120, 0, 255, 0.4), transparent 35%),
-        linear-gradient(135deg, #07152f, #102b5c, #25105c);
-      overflow-x: hidden;
+      background: linear-gradient(135deg, #071952, #088395, #35A29F, #F2CD5C);
+      color: white;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: auto;
     }
 
     header {
-      padding: 20px;
+      padding: 25px 0;
       text-align: center;
-      background: rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.15);
     }
 
     header h1 {
-      font-size: 38px;
-      color: #00ffff;
-      letter-spacing: 3px;
-      text-shadow: 0 0 15px rgba(0,255,255,0.6);
+      font-size: 42px;
+      font-weight: bold;
     }
 
     header p {
+      font-size: 18px;
       margin-top: 8px;
-      color: #eeeeee;
-      font-size: 16px;
     }
 
     .hero {
       text-align: center;
-      padding: 75px 20px 55px;
+      padding: 70px 20px;
     }
 
     .hero h2 {
-      font-size: 45px;
-      margin-bottom: 18px;
-    }
-
-    .hero h2 span {
-      color: #00ffff;
+      font-size: 42px;
+      margin-bottom: 20px;
     }
 
     .hero p {
+      font-size: 20px;
+      line-height: 1.6;
       max-width: 750px;
       margin: auto;
-      font-size: 18px;
-      line-height: 1.7;
-      color: #eeeeee;
     }
 
     .courses {
-      max-width: 1100px;
-      margin: auto;
-      padding: 30px 20px 60px;
-    }
-
-    .courses h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 35px;
-    }
-
-    .course-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin: 30px 0 50px;
     }
 
-    .course-card {
-      padding: 30px 22px;
-      border-radius: 20px;
+    .course {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px 20px;
+      border-radius: 18px;
       text-align: center;
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.18);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-      transition: 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
-    .course-card:hover {
-      transform: translateY(-8px);
-      background: rgba(255,255,255,0.17);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.35);
-    }
-
-    .course-icon {
-      font-size: 48px;
-      margin-bottom: 15px;
-    }
-
-    .course-card h3 {
-      font-size: 23px;
+    .course h3 {
+      font-size: 24px;
       margin-bottom: 12px;
-      color: #00ffff;
     }
 
-    .course-card p {
-      color: #eeeeee;
-      line-height: 1.6;
-      font-size: 15px;
+    .course p {
+      line-height: 1.5;
     }
 
     .about {
-      max-width: 900px;
-      margin: 10px auto 50px;
-      padding: 40px 25px;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 35px 25px;
+      border-radius: 18px;
       text-align: center;
-      background: rgba(0,0,0,0.25);
-      border-radius: 25px;
-      border: 1px solid rgba(255,255,255,0.15);
+      margin-bottom: 40px;
     }
 
     .about h2 {
+      margin-bottom: 15px;
       font-size: 30px;
-      margin-bottom: 18px;
-      color: #00ffff;
-    }
-
-    .about p {
-      line-height: 1.8;
-      color: #eeeeee;
     }
 
     .contact {
-      max-width: 800px;
-      margin: auto;
-      padding: 40px 20px 60px;
       text-align: center;
+      padding: 40px 20px;
     }
 
     .contact h2 {
       font-size: 30px;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
 
-    .contact-info {
-      line-height: 2;
+    .contact p {
+      margin: 8px 0;
       font-size: 17px;
-      margin-bottom: 30px;
     }
 
-    .whatsapp-btn {
+    .whatsapp {
       display: inline-block;
+      margin-top: 25px;
       padding: 16px 30px;
-      border-radius: 50px;
       background: #25D366;
       color: white;
       text-decoration: none;
-      font-size: 18px;
+      border-radius: 50px;
+      font-size: 19px;
       font-weight: bold;
-      box-shadow: 0 8px 25px rgba(37,211,102,0.35);
-      transition: 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      transition: 0.3s;
     }
 
-    .whatsapp-btn:hover {
+    .whatsapp:hover {
+      background: #128C7E;
       transform: scale(1.05);
-      background: #1ebe5d;
     }
 
     footer {
-      padding: 25px 15px;
       text-align: center;
-      background: rgba(0,0,0,0.4);
-      color: #cccccc;
-      font-size: 14px;
-    }
-
-    footer strong {
-      color: #00ffff;
+      padding: 25px;
+      background: rgba(0,0,0,0.3);
+      margin-top: 30px;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 30px;
-      }
-
-      .hero {
-        padding-top: 55px;
+        font-size: 32px;
       }
 
       .hero h2 {
-        font-size: 34px;
+        font-size: 30px;
       }
 
       .hero p {
-        font-size: 16px;
-      }
-
-      .courses h2,
-      .about h2,
-      .contact h2 {
-        font-size: 27px;
+        font-size: 17px;
       }
     }
   </style>
@@ -218,103 +157,89 @@
 <body>
 
   <header>
-    <h1>VLSTECH</h1>
-    <p>Technology • Training • Innovation</p>
+    <div class="container">
+      <h1>VLSTech</h1>
+      <p>Technology Training & Digital Skills</p>
+    </div>
   </header>
 
   <section class="hero">
-    <h2>Build Your Future With <span>Technology</span></h2>
-
-    <p>
-      Welcome to VLSTECH — your platform for practical IT training,
-      networking, programming and modern technology skills.
-      Learn valuable skills that can help you build a successful career
-      in the digital world.
-    </p>
+    <div class="container">
+      <h2>Build Your Future With Technology</h2>
+      <p>
+        Learn practical technology skills that can help you build a career,
+        start a business, and solve real-world problems.
+      </p>
+    </div>
   </section>
 
-  <section class="courses">
+  <section class="container">
+    <div class="courses">
 
-    <h2>Our Training Programs</h2>
-
-    <div class="course-grid">
-
-      <div class="course-card">
-        <div class="course-icon">🌐</div>
-        <h3>CCNA</h3>
+      <div class="course">
+        <h3>CCNA Training</h3>
         <p>
-          Learn networking fundamentals, IP addressing, routing,
-          switching, network security and Cisco technologies.
+          Learn networking fundamentals, routing, switching,
+          IP addressing and Cisco networking.
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">📡</div>
-        <h3>MikroTik</h3>
+      <div class="course">
+        <h3>MikroTik Training</h3>
         <p>
-          Learn MikroTik router configuration, network management,
-          wireless networking, routing and internet sharing.
+          Learn MikroTik router configuration, networking,
+          wireless setup and network management.
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">🤖</div>
+      <div class="course">
         <h3>AI & Programming</h3>
         <p>
           Learn programming concepts, artificial intelligence,
-          automation and modern digital technology.
+          automation and modern digital technologies.
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">💻</div>
+      <div class="course">
         <h3>Web Development</h3>
         <p>
-          Learn HTML, CSS, JavaScript and how to build modern,
-          responsive and professional websites.
+          Learn HTML, CSS, JavaScript and how to create
+          modern responsive websites.
         </p>
       </div>
 
     </div>
   </section>
 
-  <section class="about">
-
-    <h2>Why Choose VLSTECH?</h2>
-
-    <p>
-      At VLSTECH, we focus on practical technology training designed
-      to help beginners and aspiring IT professionals develop useful
-      real-world skills. Our goal is to provide quality training in
-      networking, programming, artificial intelligence and web development.
-    </p>
-
+  <section class="container">
+    <div class="about">
+      <h2>Why Choose VLSTech?</h2>
+      <p>
+        We provide practical and career-focused technology training
+        designed for beginners and aspiring IT professionals.
+      </p>
+    </div>
   </section>
 
   <section class="contact">
+    <div class="container">
+      <h2>Register for Training</h2>
 
-    <h2>Register for Training</h2>
+      <p><strong>Phone:</strong> +234 904 286 9455</p>
+      <p><strong>Email:</strong> binvikky77@gmail.com</p>
+      <p><strong>Location:</strong> Mission Road, opposite Emokpae</p>
 
-    <div class="contact-info">
-      📞 <strong>Phone:</strong> +234 904 286 9455<br>
-      📧 <strong>Email:</strong> binvikky77@gmail.com<br>
-      📍 <strong>Location:</strong> Mission Road, opposite Emokpae
+      <a
+        class="whatsapp"
+        href="https://wa.me/2349042869455?text=Hello%20VLSTech,%20I%20want%20to%20register%20for%20your%20technology%20training."
+        target="_blank">
+        Register on WhatsApp
+      </a>
     </div>
-
-    <a
-      class="whatsapp-btn"
-      href="https://wa.me/2349042869455?text=Hello%20VLSTECH,%20I%20am%20interested%20in%20registering%20for%20your%20IT%20training."
-      target="_blank"
-    >
-      💬 Register on WhatsApp
-    </a>
-
   </section>
 
   <footer>
-    <p>
-      © 2026 <strong>VLSTECH</strong>. All Rights Reserved.
-    </p>
+    <p>© 2026 VLSTech. All Rights Reserved.</p>
   </footer>
 
 </body>
