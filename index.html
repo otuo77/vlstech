@@ -15,30 +15,47 @@
 
     body {
       font-family: Arial, sans-serif;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at top left, #00c6ff, transparent 35%),
+        radial-gradient(circle at bottom right, #7b2ff7, transparent 40%),
+        linear-gradient(135deg, #06142e, #102b55, #35146b);
       min-height: 100vh;
-      background: linear-gradient(135deg, #071952, #088395, #35A29F, #F2CD5C);
-      color: white;
-    }
-
-    .container {
-      width: 92%;
-      max-width: 1100px;
-      margin: auto;
     }
 
     header {
-      padding: 25px 0;
+      padding: 25px 20px;
       text-align: center;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(8px);
     }
 
     header h1 {
       font-size: 42px;
-      font-weight: bold;
+      color: #00eaff;
+      margin-bottom: 8px;
     }
 
     header p {
       font-size: 18px;
-      margin-top: 8px;
+      color: #ffffff;
+    }
+
+    nav {
+      text-align: center;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00eaff;
     }
 
     .hero {
@@ -47,108 +64,124 @@
     }
 
     .hero h2 {
-      font-size: 42px;
-      margin-bottom: 20px;
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .hero span {
+      color: #00eaff;
     }
 
     .hero p {
-      font-size: 20px;
-      line-height: 1.6;
-      max-width: 750px;
+      max-width: 700px;
       margin: auto;
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 28px;
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #128c7e;
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #00eaff;
     }
 
     .courses {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      margin: 30px 0 50px;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .course {
-      background: rgba(255, 255, 255, 0.15);
+    .card {
+      background: rgba(255, 255, 255, 0.12);
       padding: 30px 20px;
       border-radius: 18px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.3);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-
-    .course h3 {
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
-
-    .course p {
-      line-height: 1.5;
-    }
-
-    .about {
-      background: rgba(0, 0, 0, 0.2);
-      padding: 35px 25px;
-      border-radius: 18px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .about h2 {
-      margin-bottom: 15px;
-      font-size: 30px;
-    }
-
-    .contact {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .contact h2 {
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
-
-    .contact p {
-      margin: 8px 0;
-      font-size: 17px;
-    }
-
-    .whatsapp {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 16px 30px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      font-size: 19px;
-      font-weight: bold;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
       transition: 0.3s;
     }
 
-    .whatsapp:hover {
-      background: #128C7E;
-      transform: scale(1.05);
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.18);
+    }
+
+    .card h3 {
+      color: #00eaff;
+      margin-bottom: 12px;
+      font-size: 23px;
+    }
+
+    .card p {
+      line-height: 1.6;
+    }
+
+    .about {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .contact {
+      max-width: 700px;
+      margin: auto;
+      background: rgba(0,0,0,0.25);
+      padding: 30px;
+      border-radius: 18px;
+    }
+
+    .contact p {
+      margin: 12px 0;
+      font-size: 18px;
     }
 
     footer {
       text-align: center;
       padding: 25px;
-      background: rgba(0,0,0,0.3);
       margin-top: 30px;
+      background: rgba(0,0,0,0.4);
+    }
+
+    footer strong {
+      color: #00eaff;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 32px;
+        font-size: 34px;
       }
 
       .hero h2 {
         font-size: 30px;
       }
 
-      .hero p {
-        font-size: 17px;
+      nav a {
+        display: inline-block;
+        margin: 6px;
       }
     }
   </style>
@@ -157,89 +190,117 @@
 <body>
 
   <header>
-    <div class="container">
-      <h1>VLSTech</h1>
-      <p>Technology Training & Digital Skills</p>
-    </div>
+    <h1>VLSTech</h1>
+    <p>Technology Training & Digital Skills</p>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Build Your Future With Technology</h2>
-      <p>
-        Learn practical technology skills that can help you build a career,
-        start a business, and solve real-world problems.
-      </p>
-    </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>Build Your Future With <span>Technology</span></h2>
+
+    <p>
+      Welcome to VLSTech, where we provide practical technology training
+      designed to help you develop valuable digital and professional skills.
+    </p>
+
+    <a
+      class="btn"
+      href="https://wa.me/2349042869455?text=Hello%20VLSTech,%20I%20want%20to%20register%20for%20your%20technology%20training."
+      target="_blank">
+      Register on WhatsApp
+    </a>
   </section>
 
-  <section class="container">
+  <section class="section" id="courses">
+    <h2>Our Training Programs</h2>
+
     <div class="courses">
 
-      <div class="course">
+      <div class="card">
         <h3>CCNA Training</h3>
         <p>
-          Learn networking fundamentals, routing, switching,
-          IP addressing and Cisco networking.
+          Learn networking fundamentals, IP addressing, routing,
+          switching and essential Cisco networking skills.
         </p>
       </div>
 
-      <div class="course">
+      <div class="card">
         <h3>MikroTik Training</h3>
         <p>
           Learn MikroTik router configuration, networking,
-          wireless setup and network management.
+          bandwidth management and network administration.
         </p>
       </div>
 
-      <div class="course">
+      <div class="card">
         <h3>AI & Programming</h3>
         <p>
-          Learn programming concepts, artificial intelligence,
-          automation and modern digital technologies.
+          Develop programming skills and learn how artificial
+          intelligence can be used to solve real-world problems.
         </p>
       </div>
 
-      <div class="course">
+      <div class="card">
         <h3>Web Development</h3>
         <p>
-          Learn HTML, CSS, JavaScript and how to create
-          modern responsive websites.
+          Learn how to build modern websites using HTML, CSS,
+          JavaScript and other web technologies.
         </p>
       </div>
 
     </div>
   </section>
 
-  <section class="container">
+  <section class="section" id="about">
+    <h2>About VLSTech</h2>
+
     <div class="about">
-      <h2>Why Choose VLSTech?</h2>
       <p>
-        We provide practical and career-focused technology training
-        designed for beginners and aspiring IT professionals.
+        VLSTech is focused on helping students, beginners and
+        technology enthusiasts gain practical skills for today's
+        digital world.
+      </p>
+
+      <p>
+        Our training covers networking, programming, artificial
+        intelligence and web development.
       </p>
     </div>
   </section>
 
-  <section class="contact">
-    <div class="container">
-      <h2>Register for Training</h2>
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
 
-      <p><strong>Phone:</strong> +234 904 286 9455</p>
-      <p><strong>Email:</strong> binvikky77@gmail.com</p>
-      <p><strong>Location:</strong> Mission Road, opposite Emokpae</p>
+    <div class="contact">
+      <p><strong>📞 Phone:</strong> +234 904 286 9455</p>
+
+      <p><strong>📧 Email:</strong> binvikky77@gmail.com</p>
+
+      <p>
+        <strong>📍 Address:</strong>
+        Mission Road, Opposite Emokpae
+      </p>
 
       <a
-        class="whatsapp"
-        href="https://wa.me/2349042869455?text=Hello%20VLSTech,%20I%20want%20to%20register%20for%20your%20technology%20training."
+        class="btn"
+        href="https://wa.me/2349042869455?text=Hello%20VLSTech,%20I%20want%20more%20information%20about%20your%20training."
         target="_blank">
-        Register on WhatsApp
+        Chat With Us on WhatsApp
       </a>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 VLSTech. All Rights Reserved.</p>
+    <p>
+      © 2026 <strong>VLSTech</strong>. All Rights Reserved.
+    </p>
+    <p>Powered by Vikky</p>
   </footer>
 
 </body>
