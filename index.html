@@ -1,433 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>VLSTech - Technology Training</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      color: #ffffff;
-      background: linear-gradient(135deg, #071a52, #063970, #0084a8);
-      min-height: 100vh;
-    }
-
-    header {
-      text-align: center;
-      padding: 45px 20px;
-      background: linear-gradient(135deg, #001b44, #005c97);
-    }
-
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 20px;
-      color: #dff6ff;
-    }
-
-    .venue-top {
-      margin-top: 20px;
-      font-size: 16px;
-      line-height: 1.8;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 30px;
-      margin: 40px 0 25px;
-    }
-
-    .courses {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .course {
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    }
-
-    .course h3 {
-      color: #00eaff;
-      margin-bottom: 15px;
-      font-size: 23px;
-    }
-
-    .course p {
-      line-height: 1.6;
-      color: #f1f8ff;
-    }
-
-    /* REGISTRATION */
-
-    .registration {
-      width: 90%;
-      max-width: 650px;
-      margin: 50px auto;
-      padding: 35px;
-      border-radius: 20px;
-
-      /* New form background */
-      background:
-        linear-gradient(
-          135deg,
-          rgba(0, 30, 80, 0.97),
-          rgba(0, 120, 150, 0.97)
-        );
-
-      border: 2px solid rgba(0, 234, 255, 0.5);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-    }
-
-    .registration h2 {
-      text-align: center;
-      margin-bottom: 12px;
-      color: #00eaff;
-      font-size: 30px;
-    }
-
-    .intro {
-      text-align: center;
-      line-height: 1.6;
-      margin-bottom: 25px;
-      color: #e5f9ff;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    label {
-      margin-top: 15px;
-      margin-bottom: 7px;
-      font-weight: bold;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 9px;
-      font-size: 16px;
-      background: #ffffff;
-      color: #111111;
-      outline: none;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      box-shadow: 0 0 0 3px rgba(0, 234, 255, 0.4);
-    }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .register-btn {
-      margin-top: 25px;
-      padding: 16px;
-      border: none;
-      border-radius: 10px;
-      background: #25D366;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .register-btn:hover {
-      background: #1ebe5d;
-      transform: translateY(-2px);
-    }
-
-    .whatsapp-info {
-      text-align: center;
-      margin-top: 15px;
-      font-size: 14px;
-      color: #d9faff;
-    }
-
-    /* CONTACT */
-
-    .contact-section {
-      width: 90%;
-      max-width: 900px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .contact-card {
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.13);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-    }
-
-    .contact-card h3 {
-      color: #00eaff;
-      margin-bottom: 12px;
-      font-size: 22px;
-    }
-
-    .contact-card p {
-      line-height: 1.7;
-    }
-
-    .contact-card a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .contact-card a:hover {
-      color: #00eaff;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      padding: 25px 15px;
-      background: rgba(0, 0, 0, 0.3);
-      line-height: 1.8;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 34px;
-      }
-
-      header p {
-        font-size: 17px;
-      }
-
-      .registration {
-        padding: 25px 18px;
-      }
-
-      .section-title {
-        font-size: 26px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <h1>VLSTech</h1>
-
-    <p>Technology Training &amp; Digital Skills</p>
-
-    <div class="venue-top">
-      📍 Mission Road, opposite Emokpae Primary School<br>
-      📞 <a href="tel:+2349042869455" style="color:white;">
-        +234 904 286 9455
-      </a>
-    </div>
-  </header>
-
-
-  <!-- COURSES -->
-  <h2 class="section-title">Our Training Programs</h2>
-
-  <section class="courses">
-
-    <div class="course">
-      <h3>CCNA</h3>
-      <p>
-        Learn networking fundamentals, routing,
-        switching and network security.
-      </p>
-    </div>
-
-    <div class="course">
-      <h3>MikroTik</h3>
-      <p>
-        Learn MikroTik router configuration,
-        networking and hotspot management.
-      </p>
-    </div>
-
-    <div class="course">
-      <h3>AI &amp; Programming</h3>
-      <p>
-        Learn programming fundamentals and
-        practical Artificial Intelligence skills.
-      </p>
-    </div>
-
-    <div class="course">
-      <h3>Web Development</h3>
-      <p>
-        Learn HTML, CSS, JavaScript and how to
-        build modern responsive websites.
-      </p>
-    </div>
-
-  </section>
-
-
-  <!-- REGISTRATION -->
-  <section class="registration" id="registration">
-
-    <h2>Register for Training</h2>
-
-    <p class="intro">
-      Complete the form below and click the button.
-      Your registration details will be sent to VLSTech
-      through WhatsApp.
-    </p>
-
-    <form id="registrationForm">
-
-      <label for="name">Full Name</label>
-      <input
-        type="text"
-        id="name"
-        placeholder="Enter your full name"
-        required
-      >
-
-      <label for="phone">Phone Number</label>
-      <input
-        type="tel"
-        id="phone"
-        placeholder="Enter your phone number"
-        required
-      >
-
-      <label for="email">Email Address</label>
-      <input
-        type="email"
-        id="email"
-        placeholder="Enter your email"
-        required
-      >
-
-      <label for="course">Select Training</label>
-
-      <select id="course" required>
-        <option value="">-- Select a training program --</option>
-        <option value="CCNA">CCNA</option>
-        <option value="MikroTik">MikroTik</option>
-        <option value="AI & Programming">AI & Programming</option>
-        <option value="Web Development">Web Development</option>
-      </select>
-
-      <label for="message">Additional Message</label>
-
-      <textarea
-        id="message"
-        placeholder="Any question or additional information..."
-      ></textarea>
-
-      <button type="submit" class="register-btn">
-        📱 Register via WhatsApp
-      </button>
-
-      <p class="whatsapp-info">
-        Your WhatsApp app will open with your registration details.
-      </p>
-
-    </form>
-  </section>
-
-
-  <!-- CONTACT & VENUE -->
-  <h2 class="section-title">Contact &amp; Venue</h2>
-
-  <section class="contact-section">
-
-    <div class="contact-card">
-      <h3>📞 Contact</h3>
-
-      <p>
-        <a href="tel:+2349042869455">
-          +234 904 286 9455
-        </a>
-      </p>
-    </div>
-
-    <div class="contact-card">
-      <h3>📍 Training Venue</h3>
-
-      <p>
-        Mission Road,<br>
-        Opposite Emokpae Primary School
-      </p>
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-    <strong>VLSTech</strong><br>
-    Technology Training &amp; Digital Skills<br>
-    📍 Mission Road, opposite Emokpae Primary School<br>
-    📞 +234 904 286 9455<br><br>
-    © 2026 VLSTech. All Rights Reserved.
-  </footer>
-
-
-  <!-- WHATSAPP SCRIPT -->
-  <script>
-    document.getElementById("registrationForm").addEventListener("submit", function(event) {
-
-      event.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const course = document.getElementById("course").value;
-      const message = document.getElementById("message").value.trim();
-
-      const whatsappNumber = "2349042869455";
-
-      const text =
-        "VLSTech Training Registration%0A%0A" +
-        "Full Name: " + encodeURIComponent(name) + "%0A" +
-        "Phone: " + encodeURIComponent(phone) + "%0A" +
-        "Email: " + encodeURIComponent(email) + "%0A" +
-        "Training: " + encodeURIComponent(course) + "%0A" +
-        "Additional Message: " + encodeURIComponent(message);
-
-      const whatsappURL =
-        "https://wa.me/" + whatsappNumber + "?text=" + text;
-
-      window.location.href = whatsappURL;
-    });
-  </script>
-
-</body>
-</html>
+/* REGISTER BUTTON */
+.register-btn {
+  background: #00c853;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background: #00a844;
+}
+
+/* POPUP BACKGROUND */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  overflow-y: auto;
+  padding: 30px 15px;
+}
+
+/* POPUP BOX */
+.modal-content {
+  position: relative;
+  background: #075985;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  color: white;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 35px;
+  cursor: pointer;
+  color: white;
+}
+
+.close-btn:hover {
+  color: #ff5252;
+}
+
+.modal-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.modal-content p {
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* FORM */
+.modal-content label {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 15px 0 8px;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #f5f8fa;
+  color: #222;
+}
+
+.modal-content textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #25D366;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #1ebe5d;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .modal {
+    padding: 15px;
+  }
+
+  .modal-content {
+    padding: 25px 20px;
+    margin: 10px auto;
+  }
+
+  .modal-content h2 {
+    font-size: 27px;
+  }
+}
