@@ -16,7 +16,7 @@
     body {
       font-family: Arial, sans-serif;
       background: #07111f;
-      color: white;
+      color: #ffffff;
       line-height: 1.6;
     }
 
@@ -29,8 +29,8 @@
     }
 
     header h1 {
-      color: #00e676;
-      font-size: 35px;
+      color: #00c853;
+      font-size: 36px;
       margin-bottom: 5px;
     }
 
@@ -41,33 +41,40 @@
 
     /* HERO */
     .hero {
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 70px 20px;
+      padding: 50px 20px;
       background: linear-gradient(
         rgba(3, 15, 30, 0.9),
-        rgba(3, 15, 30, 0.9)
+        rgba(3, 15, 30, 0.95)
       );
     }
 
+    .hero-content {
+      max-width: 800px;
+    }
+
     .hero h2 {
-      font-size: 40px;
-      margin-bottom: 15px;
+      font-size: 45px;
+      margin-bottom: 20px;
+      color: #ffffff;
     }
 
     .hero h2 span {
-      color: #00e676;
+      color: #00c853;
     }
 
     .hero p {
-      max-width: 700px;
-      margin: auto;
-      color: #ddd;
-      font-size: 18px;
+      font-size: 19px;
+      color: #d7d7d7;
+      margin-bottom: 30px;
     }
 
     /* REGISTER BUTTON */
     .register-btn {
-      margin-top: 30px;
       background: #00c853;
       color: white;
       border: none;
@@ -81,97 +88,95 @@
 
     .register-btn:hover {
       background: #00a844;
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
-    /* SECTION TITLE */
+    /* SECTIONS */
     .section-title {
       text-align: center;
       font-size: 30px;
-      margin: 40px 0 25px;
-      color: #00e676;
+      margin: 45px 0 25px;
+      color: #00c853;
     }
 
     /* COURSES */
     .courses {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      width: 90%;
       max-width: 1100px;
       margin: auto;
-      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
     }
 
     .course {
-      background: #0d2238;
+      background: #0d243d;
       padding: 25px;
-      border-radius: 12px;
-      border: 1px solid #173b5d;
+      border-radius: 10px;
+      border: 1px solid #173b5f;
       transition: 0.3s;
     }
 
     .course:hover {
       transform: translateY(-5px);
-      border-color: #00e676;
+      border-color: #00c853;
     }
 
     .course h3 {
-      color: #00e676;
-      margin-bottom: 10px;
+      color: #00c853;
       font-size: 22px;
+      margin-bottom: 10px;
     }
 
     .course p {
-      color: #ccc;
+      color: #d0d0d0;
     }
 
     /* ABOUT */
     .about {
+      width: 90%;
       max-width: 900px;
-      margin: 40px auto;
-      padding: 30px 20px;
+      margin: auto;
       text-align: center;
-    }
-
-    .about p {
       color: #ddd;
       font-size: 17px;
     }
 
     /* CONTACT */
     .contact {
-      background: #0b1f35;
+      width: 90%;
+      max-width: 900px;
+      margin: 30px auto 50px;
+      background: #0d243d;
+      padding: 30px;
+      border-radius: 12px;
       text-align: center;
-      padding: 40px 20px;
-      margin-top: 30px;
-    }
-
-    .contact h2 {
-      color: #00e676;
-      margin-bottom: 20px;
     }
 
     .contact p {
-      margin: 8px 0;
+      margin: 12px 0;
       color: #ddd;
+      font-size: 17px;
     }
 
     .contact strong {
-      color: white;
+      color: #00c853;
     }
 
     /* FOOTER */
     footer {
-      background: #050d17;
+      background: #04101d;
       text-align: center;
-      padding: 20px;
+      padding: 25px 15px;
       color: #aaa;
+      border-top: 1px solid #173b5f;
     }
 
-    /* =========================
-       REGISTRATION MODAL
-       ========================= */
+    footer span {
+      color: #00c853;
+    }
 
+    /* MODAL BACKGROUND */
     .modal {
       display: none;
       position: fixed;
@@ -180,31 +185,33 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.8);
       overflow-y: auto;
+      background: rgba(0, 0, 0, 0.75);
       padding: 30px 15px;
     }
 
+    /* MODAL BOX */
     .modal-content {
       background: #102a43;
+      width: 100%;
       max-width: 500px;
       margin: 30px auto;
       padding: 30px;
-      border-radius: 15px;
+      border-radius: 12px;
       position: relative;
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
       border: 1px solid #00c853;
     }
 
     .modal-content h2 {
-      color: #00e676;
+      color: #00c853;
       text-align: center;
       margin-bottom: 10px;
     }
 
     .modal-content > p {
+      color: #ddd;
       text-align: center;
-      color: #ccc;
       margin-bottom: 25px;
     }
 
@@ -214,57 +221,61 @@
       right: 18px;
       top: 10px;
       font-size: 32px;
-      color: white;
+      color: #ffffff;
       cursor: pointer;
     }
 
     .close-btn:hover {
-      color: #00e676;
+      color: #00c853;
     }
 
     /* FORM */
-    .registration-form label {
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    .form-group label {
       display: block;
-      margin-bottom: 6px;
-      color: white;
+      color: #ffffff;
+      margin-bottom: 7px;
       font-weight: bold;
     }
 
-    .registration-form input,
-    .registration-form select,
-    .registration-form textarea {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
       width: 100%;
       padding: 13px;
-      margin-bottom: 15px;
-      border: none;
+      border: 1px solid #315574;
       border-radius: 7px;
-      background: white;
-      color: #222;
+      background: #071a2d;
+      color: #ffffff;
       font-size: 15px;
       outline: none;
     }
 
-    .registration-form textarea {
-      min-height: 90px;
-      resize: vertical;
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #00c853;
     }
 
-    .registration-form input:focus,
-    .registration-form select:focus,
-    .registration-form textarea:focus {
-      border: 2px solid #00e676;
+    .form-group textarea {
+      min-height: 90px;
+      resize: vertical;
     }
 
     .submit-btn {
       width: 100%;
       padding: 14px;
       border: none;
-      border-radius: 8px;
+      border-radius: 7px;
       background: #00c853;
-      color: white;
+      color: #ffffff;
       font-size: 17px;
       font-weight: bold;
       cursor: pointer;
+      margin-top: 5px;
     }
 
     .submit-btn:hover {
@@ -274,36 +285,35 @@
     /* SUCCESS MESSAGE */
     #successMessage {
       display: none;
-      text-align: center;
-      margin-top: 20px;
+      background: #063d20;
+      border: 1px solid #00c853;
       padding: 15px;
-      background: #0b6b3a;
-      border-radius: 8px;
-      color: white;
+      border-radius: 7px;
+      color: #ffffff;
+      margin-top: 15px;
+      text-align: center;
     }
 
     /* MOBILE */
     @media (max-width: 600px) {
-
       header h1 {
-        font-size: 28px;
-      }
-
-      .hero {
-        padding: 50px 15px;
+        font-size: 30px;
       }
 
       .hero h2 {
-        font-size: 30px;
+        font-size: 32px;
       }
 
       .hero p {
         font-size: 16px;
       }
 
+      .section-title {
+        font-size: 26px;
+      }
+
       .modal-content {
-        padding: 25px 20px;
-        margin: 15px auto;
+        padding: 25px 18px;
       }
     }
   </style>
@@ -314,28 +324,30 @@
   <!-- HEADER -->
   <header>
     <h1>VLSTech</h1>
-    <p>Technology Training & Digital Skills</p>
+    <p>Technology Training &amp; Digital Skills</p>
   </header>
 
 
   <!-- HERO SECTION -->
   <section class="hero">
+    <div class="hero-content">
 
-    <h2>
-      Build Your Future With
-      <span>Technology</span>
-    </h2>
+      <h2>
+        Build Your Future With
+        <span>Technology</span>
+      </h2>
 
-    <p>
-      Learn practical technology and digital skills that can help
-      you build a successful career in the IT industry.
-    </p>
+      <p>
+        Learn practical technology and digital skills that can help you
+        build a successful career in the modern digital world.
+      </p>
 
-    <!-- REGISTER BUTTON -->
-    <button class="register-btn" onclick="openRegistration()">
-      Register Now
-    </button>
+      <!-- REGISTER BUTTON -->
+      <button class="register-btn" onclick="openRegistration()">
+        Register Now
+      </button>
 
+    </div>
   </section>
 
 
@@ -347,8 +359,8 @@
     <div class="course">
       <h3>CCNA</h3>
       <p>
-        Learn networking fundamentals, routing, switching
-        and network security.
+        Learn networking fundamentals, routing, switching,
+        IP addressing and network security.
       </p>
     </div>
 
@@ -361,10 +373,10 @@
     </div>
 
     <div class="course">
-      <h3>Cyber Security</h3>
+      <h3>Cybersecurity</h3>
       <p>
-        Understand cybersecurity fundamentals, threats,
-        network security and ethical security practices.
+        Learn cybersecurity fundamentals, network security,
+        threats, vulnerabilities and protection techniques.
       </p>
     </div>
 
@@ -379,16 +391,16 @@
     <div class="course">
       <h3>Computer Networking</h3>
       <p>
-        Learn how computers communicate and how to design,
-        configure and troubleshoot networks.
+        Understand computer networks, LAN, WAN, network
+        devices, IP addresses and troubleshooting.
       </p>
     </div>
 
     <div class="course">
       <h3>IT Support</h3>
       <p>
-        Develop practical skills for computer maintenance,
-        troubleshooting and technical support.
+        Learn computer troubleshooting, operating systems,
+        software installation and technical support.
       </p>
     </div>
 
@@ -396,24 +408,24 @@
 
 
   <!-- ABOUT -->
+  <h2 class="section-title">About VLSTech</h2>
+
   <section class="about">
 
-    <h2 class="section-title">About VLSTech</h2>
-
     <p>
-      VLSTech is focused on providing practical technology
-      training and digital skills to students, beginners,
-      professionals and anyone interested in building a career
-      in technology.
+      VLSTech is focused on providing practical technology training
+      and digital skills development. Our goal is to help students,
+      beginners and professionals gain useful technical knowledge
+      for today's digital world.
     </p>
 
   </section>
 
 
   <!-- CONTACT -->
-  <section class="contact">
+  <h2 class="section-title">Contact &amp; Venue</h2>
 
-    <h2>Contact Us</h2>
+  <section class="contact">
 
     <p>
       <strong>Venue:</strong>
@@ -421,35 +433,24 @@
     </p>
 
     <p>
-      <strong>Training:</strong>
-      Technology Training & Digital Skills
+      <strong>Phone:</strong>
+      Contact VLSTech for registration information
     </p>
 
     <p>
-      <strong>Registration:</strong>
-      Click the "Register Now" button above
+      <strong>Training:</strong>
+      Technology Training &amp; Digital Skills
     </p>
 
   </section>
 
 
-  <!-- FOOTER -->
-  <footer>
-    <p>
-      &copy; 2026 VLSTech. All Rights Reserved.
-    </p>
-  </footer>
-
-
-  <!-- =========================
-       REGISTRATION POPUP
-       ========================= -->
-
+  <!-- REGISTRATION POPUP -->
   <div id="registrationModal" class="modal">
 
     <div class="modal-content">
 
-      <!-- CLOSE -->
+      <!-- CLOSE BUTTON -->
       <span class="close-btn" onclick="closeRegistration()">
         &times;
       </span>
@@ -463,113 +464,96 @@
 
 
       <!-- REGISTRATION FORM -->
-      <form
-        class="registration-form"
-        id="registrationForm"
-        onsubmit="submitRegistration(event)"
-      >
+      <form id="registrationForm">
 
-        <!-- FULL NAME -->
-        <label for="fullname">
-          Full Name
-        </label>
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
 
-        <input
-          type="text"
-          id="fullname"
-          name="fullname"
-          placeholder="Enter your full name"
-          required
-        >
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Enter your full name"
+            required
+          >
+        </div>
 
 
-        <!-- PHONE -->
-        <label for="phone">
-          Phone Number
-        </label>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
 
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="Enter your phone number"
-          required
-        >
-
-
-        <!-- EMAIL -->
-        <label for="email">
-          Email Address
-        </label>
-
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email address"
-          required
-        >
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            required
+          >
+        </div>
 
 
-        <!-- COURSE -->
-        <label for="course">
-          Select Training Program
-        </label>
+        <div class="form-group">
+          <label for="email">Email Address</label>
 
-        <select
-          id="course"
-          name="course"
-          required
-        >
-
-          <option value="">
-            -- Select a course --
-          </option>
-
-          <option value="CCNA">
-            CCNA
-          </option>
-
-          <option value="MikroTik">
-            MikroTik
-          </option>
-
-          <option value="Cyber Security">
-            Cyber Security
-          </option>
-
-          <option value="Web Development">
-            Web Development
-          </option>
-
-          <option value="Computer Networking">
-            Computer Networking
-          </option>
-
-          <option value="IT Support">
-            IT Support
-          </option>
-
-        </select>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          >
+        </div>
 
 
-        <!-- MESSAGE -->
-        <label for="message">
-          Additional Information
-        </label>
+        <div class="form-group">
+          <label for="course">Select Training Program</label>
 
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Any additional information..."
-        ></textarea>
+          <select id="course" name="course" required>
+
+            <option value="">
+              -- Select a course --
+            </option>
+
+            <option value="CCNA">
+              CCNA
+            </option>
+
+            <option value="MikroTik">
+              MikroTik
+            </option>
+
+            <option value="Cybersecurity">
+              Cybersecurity
+            </option>
+
+            <option value="Web Development">
+              Web Development
+            </option>
+
+            <option value="Computer Networking">
+              Computer Networking
+            </option>
+
+            <option value="IT Support">
+              IT Support
+            </option>
+
+          </select>
+        </div>
 
 
-        <!-- SUBMIT -->
-        <button
-          type="submit"
-          class="submit-btn"
-        >
+        <div class="form-group">
+          <label for="message">Message</label>
+
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter any additional information..."
+          ></textarea>
+        </div>
+
+
+        <button type="submit" class="submit-btn">
           Submit Registration
         </button>
 
@@ -579,7 +563,7 @@
       <!-- SUCCESS MESSAGE -->
       <div id="successMessage">
         Registration submitted successfully!
-        We will contact you soon.
+        VLSTech will contact you with more information.
       </div>
 
     </div>
@@ -587,66 +571,90 @@
   </div>
 
 
-  <!-- =========================
-       JAVASCRIPT
-       ========================= -->
+  <!-- FOOTER -->
+  <footer>
 
+    <p>
+      &copy; 2026 <span>VLSTech</span>.
+      All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
   <script>
 
-    // OPEN REGISTRATION POPUP
+    /* OPEN REGISTRATION POPUP */
     function openRegistration() {
-
       document.getElementById("registrationModal").style.display = "block";
-
       document.body.style.overflow = "hidden";
     }
 
 
-    // CLOSE REGISTRATION POPUP
+    /* CLOSE REGISTRATION POPUP */
     function closeRegistration() {
-
       document.getElementById("registrationModal").style.display = "none";
-
       document.body.style.overflow = "auto";
     }
 
 
-    // CLOSE WHEN CLICKING OUTSIDE THE FORM
+    /* CLOSE WHEN CLICKING OUTSIDE THE FORM */
     window.onclick = function(event) {
 
       const modal =
         document.getElementById("registrationModal");
 
       if (event.target === modal) {
-
         closeRegistration();
-
       }
 
     };
 
 
-    // SUBMIT REGISTRATION
-    function submitRegistration(event) {
+    /* REGISTRATION FORM */
+    document.getElementById("registrationForm")
+      .addEventListener("submit", function(event) {
 
-      event.preventDefault();
+        event.preventDefault();
 
-      const form =
-        document.getElementById("registrationForm");
+        const fullName =
+          document.getElementById("fullName").value;
 
-      const success =
-        document.getElementById("successMessage");
+        const phone =
+          document.getElementById("phone").value;
 
-      // Hide form
-      form.style.display = "none";
+        const email =
+          document.getElementById("email").value;
 
-      // Show success message
-      success.style.display = "block";
+        const course =
+          document.getElementById("course").value;
 
-      // Clear form
-      form.reset();
+        if (
+          fullName === "" ||
+          phone === "" ||
+          email === "" ||
+          course === ""
+        ) {
+          alert("Please fill in all required fields.");
+          return;
+        }
 
-    }
+        /*
+          This currently displays a success message.
+
+          IMPORTANT:
+          This does NOT yet send the registration
+          to a database or email.
+        */
+
+        document.getElementById("successMessage")
+          .style.display = "block";
+
+        document.getElementById("registrationForm")
+          .reset();
+
+      });
 
   </script>
 
