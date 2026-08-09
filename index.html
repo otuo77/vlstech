@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>VLSTech - Technology Training</title>
-
-  <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>VLSTech - Technology Training</title>  <style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -20,7 +15,7 @@
     body {
       font-family: Arial, sans-serif;
       color: #ffffff;
-      background: linear-gradient(135deg, #003b73, #0077b6, #00a8e8);
+      background: linear-gradient(135deg, #001f3f, #0077b6, #00b4d8);
       min-height: 100vh;
     }
 
@@ -30,7 +25,7 @@
     }
 
     header h1 {
-      font-size: 42px;
+      font-size: 44px;
       margin-bottom: 15px;
     }
 
@@ -59,13 +54,13 @@
     }
 
     .course {
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.2);
       border-radius: 22px;
       padding: 35px 25px;
       text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
     }
 
     .course h3 {
@@ -78,26 +73,35 @@
       line-height: 1.6;
     }
 
+    /* REGISTRATION FORM */
+
     .registration {
-      background: rgba(255, 255, 255, 0.97);
-      color: #123;
+      background: linear-gradient(
+        145deg,
+        rgba(0, 31, 63, 0.95),
+        rgba(0, 119, 182, 0.92)
+      );
+
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.25);
       border-radius: 25px;
       padding: 35px 25px;
-      margin: 30px auto 60px;
+      margin: 30px auto 50px;
       max-width: 700px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+      box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+      backdrop-filter: blur(12px);
     }
 
     .registration h2 {
       text-align: center;
-      color: #0066a1;
+      color: #ffffff;
       font-size: 32px;
       margin-bottom: 10px;
     }
 
     .registration .intro {
       text-align: center;
-      color: #555;
+      color: #e7f7ff;
       margin-bottom: 25px;
       line-height: 1.5;
     }
@@ -113,17 +117,19 @@
     textarea {
       width: 100%;
       padding: 14px;
-      border: 1px solid #ccc;
+      border: 1px solid rgba(255,255,255,0.4);
       border-radius: 10px;
       font-size: 16px;
       outline: none;
+      background: rgba(255,255,255,0.95);
+      color: #123;
     }
 
     input:focus,
     select:focus,
     textarea:focus {
-      border-color: #008ed6;
-      box-shadow: 0 0 5px rgba(0,142,214,0.3);
+      border-color: #00d4ff;
+      box-shadow: 0 0 8px rgba(0,212,255,0.5);
     }
 
     textarea {
@@ -153,8 +159,48 @@
     .whatsapp-info {
       text-align: center;
       margin-top: 15px;
-      color: #555;
+      color: #e7f7ff;
       font-size: 14px;
+    }
+
+    /* CONTACT AND VENUE */
+
+    .contact-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin: 30px auto 60px;
+      max-width: 850px;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      backdrop-filter: blur(8px);
+    }
+
+    .contact-card h3 {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .contact-card a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -210,183 +256,202 @@
       .registration h2 {
         font-size: 28px;
       }
+
+      .contact-section {
+        grid-template-columns: 1fr;
+      }
     }
-  </style>
-</head>
-
-<body>
-
-  <!-- HEADER -->
-  <header>
+  </style></head><body>  <!-- HEADER -->  <header>
     <h1>VLSTech</h1>
     <p>Technology Training &amp; Digital Skills</p>
-  </header>
+  </header>  <main class="container"><!-- COURSES -->
+
+<h2 class="section-title">Our Training Programs</h2>
+
+<section class="courses">
+
+  <div class="course">
+    <h3>CCNA</h3>
+    <p>
+      Learn networking fundamentals, routing,
+      switching and network security.
+    </p>
+  </div>
+
+  <div class="course">
+    <h3>MikroTik</h3>
+    <p>
+      Learn MikroTik router configuration,
+      networking and hotspot management.
+    </p>
+  </div>
+
+  <div class="course">
+    <h3>AI &amp; Programming</h3>
+    <p>
+      Learn programming fundamentals and
+      practical Artificial Intelligence skills.
+    </p>
+  </div>
+
+  <div class="course">
+    <h3>Web Development</h3>
+    <p>
+      Learn HTML, CSS, JavaScript and how to
+      build modern responsive websites.
+    </p>
+  </div>
+
+</section>
 
 
-  <main class="container">
+<!-- REGISTRATION -->
 
-    <!-- COURSES -->
-    <h2 class="section-title">Our Training Programs</h2>
+<section class="registration" id="registration">
 
-    <section class="courses">
+  <h2>Register for Training</h2>
 
-      <div class="course">
-        <h3>CCNA</h3>
-        <p>
-          Learn networking fundamentals, routing,
-          switching and network security.
-        </p>
-      </div>
+  <p class="intro">
+    Complete the form below and click the button.
+    Your registration details will be sent to VLSTech
+    through WhatsApp.
+  </p>
 
-      <div class="course">
-        <h3>MikroTik</h3>
-        <p>
-          Learn MikroTik router configuration,
-          networking and hotspot management.
-        </p>
-      </div>
+  <form id="registrationForm">
 
-      <div class="course">
-        <h3>AI &amp; Programming</h3>
-        <p>
-          Learn programming fundamentals and
-          practical Artificial Intelligence skills.
-        </p>
-      </div>
+    <label for="name">Full Name</label>
+    <input
+      type="text"
+      id="name"
+      placeholder="Enter your full name"
+      required
+    >
 
-      <div class="course">
-        <h3>Web Development</h3>
-        <p>
-          Learn HTML, CSS, JavaScript and how to
-          build modern responsive websites.
-        </p>
-      </div>
+    <label for="phone">Phone Number</label>
+    <input
+      type="tel"
+      id="phone"
+      placeholder="Enter your phone number"
+      required
+    >
 
-    </section>
+    <label for="email">Email Address</label>
+    <input
+      type="email"
+      id="email"
+      placeholder="Enter your email"
+      required
+    >
 
+    <label for="course">Select Training</label>
+    <select id="course" required>
+      <option value="">-- Select a training program --</option>
+      <option value="CCNA">CCNA</option>
+      <option value="MikroTik">MikroTik</option>
+      <option value="AI & Programming">AI & Programming</option>
+      <option value="Web Development">Web Development</option>
+    </select>
 
-    <!-- REGISTRATION -->
-    <section class="registration" id="registration">
+    <label for="message">Additional Message</label>
+    <textarea
+      id="message"
+      placeholder="Any question or additional information..."
+    ></textarea>
 
-      <h2>Register for Training</h2>
+    <button type="submit" class="register-btn">
+      Register via WhatsApp
+    </button>
 
-      <p class="intro">
-        Complete the form below and click the button.
-        Your registration details will be sent to VLSTech
-        through WhatsApp.
-      </p>
+    <p class="whatsapp-info">
+      Your WhatsApp app will open with your registration details.
+    </p>
 
-      <form id="registrationForm">
+  </form>
 
-        <label for="name">Full Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Enter your full name"
-          required
-        >
-
-        <label for="phone">Phone Number</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="Enter your phone number"
-          required
-        >
-
-        <label for="email">Email Address</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-          required
-        >
-
-        <label for="course">Select Training</label>
-        <select id="course" name="course" required>
-          <option value="">-- Select a training program --</option>
-          <option value="CCNA">CCNA</option>
-          <option value="MikroTik">MikroTik</option>
-          <option value="AI & Programming">AI & Programming</option>
-          <option value="Web Development">Web Development</option>
-        </select>
-
-        <label for="message">Additional Message</label>
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Any question or additional information..."
-        ></textarea>
-
-        <button type="submit" class="register-btn">
-          Register via WhatsApp
-        </button>
-
-        <p class="whatsapp-info">
-          Your WhatsApp app will open with your registration details.
-        </p>
-
-      </form>
-
-    </section>
-
-  </main>
+</section>
 
 
-  <!-- FOOTER -->
-  <footer>
+<!-- CONTACT & VENUE -->
+
+<h2 class="section-title">Contact &amp; Venue</h2>
+
+<section class="contact-section">
+
+  <div class="contact-card">
+    <h3>📞 Contact</h3>
+    <p>
+      <a href="tel:+2349042869455">
+        +234 904 286 9455
+      </a>
+    </p>
+  </div>
+
+  <div class="contact-card">
+    <h3>📍 Training Venue</h3>
+    <p>
+      Mission Road,<br>
+      Opposite Emokpae Primary School
+    </p>
+  </div>
+
+</section>
+
+  </main>  <!-- FOOTER -->  <footer>
     <p><strong>VLSTech</strong></p>
     <p>Technology Training &amp; Digital Skills</p>
+    <p>📍 Mission Road, opposite Emokpae Primary School</p>
+    <p>📞 +234 904 286 9455</p>
     <p>&copy; 2026 VLSTech. All Rights Reserved.</p>
-  </footer>
+  </footer>  <!-- WHATSAPP SCRIPT -->  <script>
 
+    document
+      .getElementById("registrationForm")
+      .addEventListener("submit", function(event) {
 
-  <!-- WHATSAPP REGISTRATION SCRIPT -->
-  <script>
+        event.preventDefault();
 
-    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        const name =
+          document.getElementById("name").value.trim();
 
-      event.preventDefault();
+        const phone =
+          document.getElementById("phone").value.trim();
 
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const course = document.getElementById("course").value;
-      const message = document.getElementById("message").value.trim();
+        const email =
+          document.getElementById("email").value.trim();
 
-      if (!name || !phone || !email || !course) {
-        alert("Please complete all required fields.");
-        return;
-      }
+        const course =
+          document.getElementById("course").value;
 
-      /*
-        VLSTech WhatsApp number
-        Country code: Nigeria (+234)
-      */
-      const whatsappNumber = "2349042869455";
+        const message =
+          document.getElementById("message").value.trim();
 
-      const whatsappMessage =
-        "Hello VLSTech,%0A%0A" +
-        "*NEW TRAINING REGISTRATION*%0A%0A" +
-        "*Full Name:* " + encodeURIComponent(name) + "%0A" +
-        "*Phone:* " + encodeURIComponent(phone) + "%0A" +
-        "*Email:* " + encodeURIComponent(email) + "%0A" +
-        "*Training:* " + encodeURIComponent(course) + "%0A" +
-        "*Message:* " + encodeURIComponent(message || "None") +
-        "%0A%0AThank you.";
+        if (!name || !phone || !email || !course) {
+          alert("Please complete all required fields.");
+          return;
+        }
 
-      const whatsappURL =
-        "https://wa.me/" + whatsappNumber +
-        "?text=" + whatsappMessage;
+        const whatsappNumber = "2349042869455";
 
-      window.open(whatsappURL, "_blank");
+        const whatsappMessage =
+          "Hello VLSTech,\n\n" +
+          "NEW TRAINING REGISTRATION\n\n" +
+          "Full Name: " + name + "\n" +
+          "Phone: " + phone + "\n" +
+          "Email: " + email + "\n" +
+          "Training: " + course + "\n" +
+          "Message: " + (message || "None") +
+          "\n\nVenue: Mission Road, opposite Emokpae Primary School" +
+          "\n\nThank you.";
 
-    });
+        const whatsappURL =
+          "https://wa.me/" +
+          whatsappNumber +
+          "?text=" +
+          encodeURIComponent(whatsappMessage);
 
-  </script>
+        window.location.href = whatsappURL;
 
-</body>
+      });
+
+  </script></body>
 </html>
