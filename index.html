@@ -1,285 +1,151 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>VLSTech - Technology Training</title>  <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VLSTech - Technology Training</title>
+
+  <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: Arial, sans-serif;
-      color: #ffffff;
-      background:
-        radial-gradient(circle at top left, #00c6ff, transparent 35%),
-        radial-gradient(circle at bottom right, #7b2ff7, transparent 40%),
-        linear-gradient(135deg, #06142e, #102b55, #35146b);
+      color: white;
       min-height: 100vh;
+      background: linear-gradient(135deg, #061a40, #0077b6, #00b4d8);
     }
 
     header {
-      padding: 25px 20px;
       text-align: center;
-      background: rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(8px);
+      padding: 60px 20px 40px;
     }
 
     header h1 {
-      font-size: 42px;
-      color: #00eaff;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      font-size: 18px;
-    }
-
-    nav {
-      text-align: center;
-      padding: 15px;
-      background: rgba(0, 0, 0, 0.25);
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #00eaff;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 70px 20px;
-    }
-
-    .hero h2 {
-      font-size: 40px;
+      font-size: 45px;
       margin-bottom: 15px;
     }
 
-    .hero span {
-      color: #00eaff;
+    header p {
+      font-size: 20px;
     }
 
-    .hero p {
-      max-width: 700px;
+    .container {
+      max-width: 1000px;
       margin: auto;
-      font-size: 19px;
-      line-height: 1.7;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 15px 28px;
-      background: #25d366;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 18px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #128c7e;
-      transform: scale(1.05);
-    }
-
-    .section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .section h2 {
-      font-size: 32px;
-      margin-bottom: 30px;
-      color: #00eaff;
+      padding: 20px;
     }
 
     .courses {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      max-width: 1000px;
-      margin: auto;
+      margin-top: 30px;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.12);
+    .course {
+      background: rgba(255, 255, 255, 0.15);
       padding: 30px 20px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.2);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      transition: 0.3s;
+      border-radius: 15px;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
-    .card:hover {
-      transform: translateY(-8px);
-      background: rgba(255,255,255,0.18);
+    .course h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
     }
 
-    .card h3 {
-      color: #00eaff;
-      margin-bottom: 12px;
-      font-size: 23px;
+    .course p {
+      line-height: 1.5;
     }
 
-    .card p {
-      line-height: 1.6;
+    .register {
+      text-align: center;
+      margin: 45px 0;
     }
 
-    .about {
-      max-width: 800px;
-      margin: auto;
-      font-size: 18px;
-      line-height: 1.8;
+    .register a {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 16px 30px;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
     }
 
-    .contact {
-      max-width: 700px;
-      margin: auto;
-      background: rgba(0,0,0,0.25);
-      padding: 30px;
-      border-radius: 18px;
-    }
-
-    .contact p {
-      margin: 12px 0;
-      font-size: 18px;
+    .register a:hover {
+      background: #128C7E;
     }
 
     footer {
       text-align: center;
       padding: 25px;
-      margin-top: 30px;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.25);
+      margin-top: 40px;
     }
+  </style>
+</head>
 
-    footer strong {
-      color: #00eaff;
-    }
+<body>
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 34px;
-      }
-
-      .hero h2 {
-        font-size: 30px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 6px;
-      }
-    }
-  </style></head><body>  <header>
+  <header>
     <h1>VLSTech</h1>
     <p>Technology Training & Digital Skills</p>
-  </header>  <nav>
-    <a href="#home">Home</a>
-    <a href="#courses">Courses</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>  <section class="hero" id="home">
-    <h2>Build Your Future With <span>Technology</span></h2><p>
-  Welcome to VLSTech, where we provide practical technology training
-  designed to help you develop valuable digital and professional skills.
-</p>
+  </header>
 
-<a
-  class="btn"
-  href="https://wa.me/2349042869455?text=Hello%20VLSTech%2C%20I%20want%20to%20register%20for%20your%20technology%20training."
-  target="_blank"
-  rel="noopener">
-  📱 Register on WhatsApp
-</a>
+  <div class="container">
 
-  </section>  <section class="section" id="courses">
-    <h2>Our Training Programs</h2><div class="courses">
+    <div class="courses">
 
-  <div class="card">
-    <h3>CCNA Training</h3>
-    <p>
-      Learn networking fundamentals, IP addressing, routing,
-      switching and essential Cisco networking skills.
-    </p>
+      <div class="course">
+        <h2>CCNA</h2>
+        <p>Learn networking fundamentals, routing, switching and network security.</p>
+      </div>
+
+      <div class="course">
+        <h2>MikroTik</h2>
+        <p>Learn MikroTik router configuration, networking and hotspot management.</p>
+      </div>
+
+      <div class="course">
+        <h2>AI & Programming</h2>
+        <p>Learn programming fundamentals and practical Artificial Intelligence skills.</p>
+      </div>
+
+      <div class="course">
+        <h2>Web Development</h2>
+        <p>Learn HTML, CSS and JavaScript and build modern websites.</p>
+      </div>
+
+    </div>
+
+    <div class="register">
+      <h2>Ready to Start Learning?</h2>
+      <p style="margin: 15px 0 25px;">
+        Register for your preferred training program today.
+      </p>
+
+      <a
+        href="https://wa.me/234XXXXXXXXXX?text=Hello%20VLSTech,%20I%20want%20to%20register%20for%20a%20training."
+        target="_blank">
+        Register on WhatsApp
+      </a>
+    </div>
+
   </div>
 
-  <div class="card">
-    <h3>MikroTik Training</h3>
-    <p>
-      Learn MikroTik router configuration, networking,
-      bandwidth management and network administration.
-    </p>
-  </div>
+  <footer>
+    <p>&copy; 2026 VLSTech. All Rights Reserved.</p>
+  </footer>
 
-  <div class="card">
-    <h3>AI & Programming</h3>
-    <p>
-      Develop programming skills and learn how artificial
-      intelligence can be used to solve real-world problems.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Web Development</h3>
-    <p>
-      Learn how to build modern websites using HTML, CSS,
-      JavaScript and other web technologies.
-    </p>
-  </div>
-
-</div>
-
-  </section>  <section class="section" id="about">
-    <h2>About VLSTech</h2><div class="about">
-  <p>
-    VLSTech is focused on helping students, beginners and
-    technology enthusiasts gain practical skills for today's
-    digital world.
-  </p>
-
-  <p>
-    Our training covers networking, programming, artificial
-    intelligence and web development.
-  </p>
-</div>
-
-  </section>  <section class="section" id="contact">
-    <h2>Contact Us</h2><div class="contact">
-  <p><strong>📞 Phone:</strong> +234 904 286 9455</p>
-
-  <p><strong>📧 Email:</strong> binvikky77@gmail.com</p>
-
-  <p>
-    <strong>📍 Address:</strong>
-    Mission Road, Opposite Emokpae
-  </p>
-
-  <a
-    class="btn"
-    href="https://wa.me/2349042869455?text=Hello%20VLSTech%2C%20I%20want%20more%20information%20about%20your%20training."
-    target="_blank"
-    rel="noopener">
-    💬 Chat With Us on WhatsApp
-  </a>
-</div>
-
-  </section>  <footer>
-    <p>
-      © 2026 <strong>VLSTech</strong>. All Rights Reserved.
-    </p><p>Powered by Vikky</p>
-
-  </footer></body>
+</body>
 </html>
