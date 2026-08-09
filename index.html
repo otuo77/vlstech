@@ -15,99 +15,96 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #071a2b;
+      background: #07111f;
       color: white;
       line-height: 1.6;
     }
 
     header {
-      background: #062b49;
-      padding: 25px 20px;
+      background: linear-gradient(135deg, #0066ff, #00c853);
       text-align: center;
+      padding: 50px 20px;
     }
 
     header h1 {
-      color: #00c853;
-      font-size: 40px;
+      font-size: 42px;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 18px;
-      margin-top: 5px;
+      font-size: 20px;
     }
 
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #062b49, #0b456d);
-    }
-
-    .hero h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 700px;
+    .container {
+      width: 90%;
+      max-width: 1100px;
       margin: auto;
-    }
-
-    .register-btn {
-      margin-top: 25px;
-      background: #00c853;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .register-btn:hover {
-      background: #00a844;
     }
 
     .section-title {
       text-align: center;
       margin: 40px 0 25px;
       font-size: 30px;
-      color: #00c853;
+      color: #00e676;
     }
 
     .courses {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
     }
 
     .course {
-      background: #0d2d45;
+      background: #101d30;
       padding: 25px;
       border-radius: 12px;
+      border: 1px solid #1d3557;
       text-align: center;
-      border: 1px solid #174d70;
+      transition: 0.3s;
+    }
+
+    .course:hover {
+      transform: translateY(-5px);
+      border-color: #00e676;
     }
 
     .course h3 {
-      color: #00c853;
-      margin-bottom: 10px;
+      color: #00e676;
+      margin-bottom: 12px;
+      font-size: 23px;
     }
 
+    .course p {
+      color: #d7e1ee;
+    }
+
+    .about,
     .contact {
-      text-align: center;
-      padding: 40px 20px;
-      background: #062b49;
+      background: #101d30;
       margin-top: 40px;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
     }
 
-    .contact h2 {
-      color: #00c853;
-      margin-bottom: 15px;
+    .register-area {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .register-btn {
+      background: #00c853;
+      color: white;
+      border: none;
+      padding: 15px 35px;
+      border-radius: 8px;
+      font-size: 19px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .register-btn:hover {
+      background: #00a844;
     }
 
     /* MODAL */
@@ -119,39 +116,38 @@
       top: 0;
       width: 100%;
       height: 100%;
+      overflow-y: auto;
       background: rgba(0, 0, 0, 0.75);
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
+      padding: 30px 15px;
     }
 
     .modal-content {
       background: #ffffff;
-      color: #222;
+      color: #111;
       width: 100%;
       max-width: 500px;
+      margin: 20px auto;
       padding: 30px;
       border-radius: 15px;
       position: relative;
-      max-height: 90vh;
-      overflow-y: auto;
     }
 
     .modal-content h2 {
-      color: #062b49;
       text-align: center;
+      color: #0066ff;
       margin-bottom: 10px;
     }
 
     .modal-content p {
       text-align: center;
       margin-bottom: 20px;
+      color: #555;
     }
 
     .close-btn {
       position: absolute;
       right: 18px;
-      top: 10px;
+      top: 8px;
       font-size: 32px;
       cursor: pointer;
       color: #555;
@@ -168,22 +164,28 @@
     }
 
     .form-group input,
-    .form-group select {
+    .form-group select,
+    .form-group textarea {
       width: 100%;
-      padding: 13px;
+      padding: 12px;
       border: 1px solid #ccc;
       border-radius: 7px;
       font-size: 16px;
     }
 
+    .form-group textarea {
+      height: 90px;
+      resize: vertical;
+    }
+
     .submit-btn {
       width: 100%;
       padding: 14px;
+      border: none;
+      border-radius: 8px;
       background: #00c853;
       color: white;
-      border: none;
-      border-radius: 7px;
-      font-size: 17px;
+      font-size: 18px;
       font-weight: bold;
       cursor: pointer;
     }
@@ -193,9 +195,25 @@
     }
 
     footer {
+      background: #030912;
       text-align: center;
-      padding: 20px;
-      background: #041522;
+      padding: 25px;
+      margin-top: 50px;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      header p {
+        font-size: 17px;
+      }
+
+      .modal-content {
+        padding: 25px 20px;
+      }
     }
   </style>
 </head>
@@ -204,80 +222,97 @@
 
   <!-- HEADER -->
   <header>
-    <h1>VLSTech</h1>
-    <p>Technology Training & Digital Skills</p>
+    <div class="container">
+      <h1>VLSTech</h1>
+      <p>Technology Training & Digital Skills</p>
+    </div>
   </header>
 
 
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Build Your Future With Technology</h2>
+  <!-- TRAINING PROGRAMS -->
+  <div class="container">
 
-    <p>
-      Learn practical technology and digital skills with VLSTech.
-      Get trained in networking, cybersecurity and other ICT skills.
-    </p>
+    <h2 class="section-title">Our Training Programs</h2>
 
-    <button class="register-btn" onclick="openRegistration()">
-      Register Now
-    </button>
-  </section>
+    <section class="courses">
+
+      <div class="course">
+        <h3>CCNA</h3>
+        <p>
+          Learn networking fundamentals, routing, switching,
+          network security and Cisco technologies.
+        </p>
+      </div>
+
+      <div class="course">
+        <h3>MikroTik</h3>
+        <p>
+          Learn MikroTik configuration, routing, wireless networking,
+          bandwidth management and network administration.
+        </p>
+      </div>
+
+      <div class="course">
+        <h3>🤖 AI & Machine Learning</h3>
+        <p>
+          Learn artificial intelligence concepts, machine learning,
+          automation and practical AI applications.
+        </p>
+      </div>
+
+      <div class="course">
+        <h3>💻 Programming</h3>
+        <p>
+          Learn programming fundamentals, Python, JavaScript,
+          problem solving and software development skills.
+        </p>
+      </div>
+
+      <div class="course">
+        <h3>🌐 Web Development</h3>
+        <p>
+          Learn HTML, CSS, JavaScript, responsive design and
+          how to build modern websites and web applications.
+        </p>
+      </div>
+
+    </section>
 
 
-  <!-- COURSES -->
-  <h2 class="section-title">Our Training Programs</h2>
+    <!-- ABOUT -->
+    <section class="about">
+      <h2 class="section-title">About VLSTech</h2>
 
-  <section class="courses">
-
-    <div class="course">
-      <h3>CCNA</h3>
       <p>
-        Learn networking fundamentals, routing, switching
-        and network security.
+        VLSTech provides practical technology training designed to
+        equip students and professionals with valuable digital,
+        networking, programming, AI and web development skills.
       </p>
+    </section>
+
+
+    <!-- REGISTER -->
+    <div class="register-area">
+      <button class="register-btn" onclick="openRegistration()">
+        Register Now
+      </button>
     </div>
 
-    <div class="course">
-      <h3>MikroTik</h3>
+
+    <!-- CONTACT -->
+    <section class="contact">
+      <h2 class="section-title">Contact Us</h2>
+
       <p>
-        Learn MikroTik configuration, routing,
-        wireless networking and administration.
+        📱 WhatsApp: +234 904 286 9455
       </p>
-    </div>
 
-    <div class="course">
-      <h3>Cyber Security</h3>
       <p>
-        Learn the fundamentals of cybersecurity,
-        threats, protection and network security.
+        📍 Venue: Mission Road, opposite Emokpae Primary School
       </p>
-    </div>
+    </section>
 
-    <div class="course">
-      <h3>Networking</h3>
-      <p>
-        Develop practical skills in computer networking
-        and network administration.
-      </p>
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-  <section class="contact">
-
-    <h2>Contact VLSTech</h2>
-
-    <p>
-      📍 Venue: Mission Road, opposite Emokpae Primary School
-    </p>
-
-    <p>
-      📱 WhatsApp: +234 904 286 9455
-    </p>
-
-  </section>
+  </div>
 
 
   <!-- REGISTRATION MODAL -->
@@ -292,30 +327,23 @@
       <h2>VLSTech Registration</h2>
 
       <p>
-        Fill in your details below to register for our
-        technology training programs.
+        Fill in your details and submit your registration.
       </p>
 
+      <form onsubmit="sendToWhatsApp(event)">
 
-      <form onsubmit="submitRegistration(event)">
-
-        <!-- NAME -->
         <div class="form-group">
-          <label for="name">Full Name</label>
-
+          <label>Full Name</label>
           <input
             type="text"
-            id="name"
+            id="fullName"
             placeholder="Enter your full name"
             required
           >
         </div>
 
-
-        <!-- PHONE -->
         <div class="form-group">
-          <label for="phone">Phone Number</label>
-
+          <label>Phone Number</label>
           <input
             type="tel"
             id="phone"
@@ -324,11 +352,8 @@
           >
         </div>
 
-
-        <!-- EMAIL -->
         <div class="form-group">
-          <label for="email">Email Address</label>
-
+          <label>Email Address</label>
           <input
             type="email"
             id="email"
@@ -337,15 +362,13 @@
           >
         </div>
 
-
-        <!-- COURSE -->
         <div class="form-group">
-          <label for="course">Training Program</label>
+          <label>Select Training Program</label>
 
           <select id="course" required>
 
             <option value="">
-              Select Training Program
+              -- Select a Course --
             </option>
 
             <option value="CCNA">
@@ -356,19 +379,30 @@
               MikroTik
             </option>
 
-            <option value="Cyber Security">
-              Cyber Security
+            <option value="AI & Machine Learning">
+              AI & Machine Learning
             </option>
 
-            <option value="Networking">
-              Networking
+            <option value="Programming">
+              Programming
+            </option>
+
+            <option value="Web Development">
+              Web Development
             </option>
 
           </select>
         </div>
 
+        <div class="form-group">
+          <label>Message</label>
 
-        <!-- SUBMIT -->
+          <textarea
+            id="message"
+            placeholder="Any additional information..."
+          ></textarea>
+        </div>
+
         <button type="submit" class="submit-btn">
           Register via WhatsApp
         </button>
@@ -376,7 +410,6 @@
       </form>
 
     </div>
-
   </div>
 
 
@@ -392,73 +425,84 @@
   <script>
 
     function openRegistration() {
-      document.getElementById("registrationModal").style.display = "flex";
+      document.getElementById("registrationModal").style.display = "block";
     }
-
 
     function closeRegistration() {
       document.getElementById("registrationModal").style.display = "none";
     }
 
+    // Close when clicking outside the form
+    window.onclick = function(event) {
 
-    function submitRegistration(event) {
+      const modal = document.getElementById("registrationModal");
+
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+
+    };
+
+
+    // SEND REGISTRATION TO WHATSAPP
+    function sendToWhatsApp(event) {
 
       event.preventDefault();
 
-      // VLSTech WhatsApp number
-      const whatsappNumber = "2349042869455";
+      const name =
+        document.getElementById("fullName").value;
 
-      // Get form information
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const course = document.getElementById("course").value;
+      const phone =
+        document.getElementById("phone").value;
 
+      const email =
+        document.getElementById("email").value;
 
-      // Create WhatsApp message
+      const course =
+        document.getElementById("course").value;
+
       const message =
-`Hello VLSTech,
-
-I would like to register for your technology training.
-
-Full Name: ${name}
-
-Phone Number: ${phone}
-
-Email: ${email}
-
-Training Program: ${course}
-
-Venue: Mission Road, opposite Emokpae Primary School.
-
-Thank you.`;
+        document.getElementById("message").value;
 
 
-      // Create WhatsApp link
+      const whatsappMessage =
+        "Hello VLSTech,%0A%0A" +
+        "I want to register for a training program.%0A%0A" +
+
+        "*Full Name:* " +
+        encodeURIComponent(name) +
+        "%0A" +
+
+        "*Phone:* " +
+        encodeURIComponent(phone) +
+        "%0A" +
+
+        "*Email:* " +
+        encodeURIComponent(email) +
+        "%0A" +
+
+        "*Training Program:* " +
+        encodeURIComponent(course) +
+        "%0A" +
+
+        "*Message:* " +
+        encodeURIComponent(message);
+
+
+      const whatsappNumber =
+        "2349042869455";
+
+
       const whatsappURL =
         "https://wa.me/" +
         whatsappNumber +
         "?text=" +
-        encodeURIComponent(message);
+        whatsappMessage;
 
 
-      // Open WhatsApp
       window.open(whatsappURL, "_blank");
 
     }
-
-
-    // Close modal when clicking outside the form
-    window.onclick = function(event) {
-
-      const modal =
-        document.getElementById("registrationModal");
-
-      if (event.target === modal) {
-        closeRegistration();
-      }
-
-    };
 
   </script>
 
