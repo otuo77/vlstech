@@ -4,652 +4,262 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>VLSTech - Technology Training</title>
+  <title>VLSTech - AI Automation & Technology Training</title>
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background: linear-gradient(135deg, #001f3f, #0074D9, #00b894);
-      color: white;
+      background: #f4f7fb;
+      color: #222;
     }
 
+    /* HEADER */
     header {
-      background: rgba(0, 0, 0, 0.75);
-      padding: 20px;
-      text-align: center;
+      background: linear-gradient(135deg, #061a40, #0077b6, #00b4d8);
+      color: white;
+      padding: 15px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     }
 
-    header h1 {
-      font-size: 38px;
-      color: #00ffcc;
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
     }
 
-    header p {
-      font-size: 18px;
-      margin-top: 5px;
-    }
-
-    nav {
-      margin-top: 15px;
+    .logo span {
+      color: #ffd60a;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 10px;
+      margin-left: 20px;
       font-weight: bold;
     }
 
     nav a:hover {
-      color: #00ffcc;
+      color: #ffd60a;
     }
 
+    /* HERO */
     .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 70px 20px;
+      color: white;
+      padding: 40px 20px;
+
+      background:
+        linear-gradient(
+          rgba(3, 20, 50, 0.8),
+          rgba(0, 119, 182, 0.75)
+        ),
+        linear-gradient(135deg, #03045e, #0077b6, #00b4d8);
     }
 
-    .hero h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #ffd60a;
     }
 
     .hero p {
-      font-size: 20px;
-      max-width: 700px;
-      margin: auto;
+      font-size: 21px;
+      margin-bottom: 30px;
     }
 
     .register-btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 30px;
-      background: #00c853;
-      color: white;
       border: none;
-      border-radius: 8px;
+      padding: 15px 30px;
+      border-radius: 30px;
+      background: #ffd60a;
+      color: #111;
       font-size: 18px;
       font-weight: bold;
       cursor: pointer;
-      text-decoration: none;
+      transition: 0.3s;
     }
 
     .register-btn:hover {
-      background: #009624;
+      background: white;
+      transform: scale(1.05);
     }
 
+    /* SECTIONS */
     section {
-      padding: 50px 20px;
+      padding: 70px 7%;
+    }
+
+    .section-title {
       text-align: center;
+      margin-bottom: 40px;
     }
 
-    section h2 {
-      font-size: 32px;
-      margin-bottom: 30px;
-      color: #00ffcc;
+    .section-title h2 {
+      font-size: 35px;
+      color: #023e8a;
     }
 
+    .section-title p {
+      color: #666;
+      margin-top: 10px;
+    }
+
+    /* COURSES */
     .courses {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
     }
 
     .course {
-      background: rgba(255, 255, 255, 0.12);
-      padding: 25px;
+      background: white;
+      padding: 30px 20px;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
       transition: 0.3s;
     }
 
     .course:hover {
-      transform: translateY(-5px);
-      background: rgba(255,255,255,0.18);
+      transform: translateY(-8px);
+    }
+
+    .course-icon {
+      font-size: 50px;
+      margin-bottom: 15px;
     }
 
     .course h3 {
-      color: #00ffcc;
-      margin-bottom: 10px;
-      font-size: 23px;
+      color: #0077b6;
+      margin-bottom: 12px;
     }
 
     .course p {
+      color: #555;
+    }
+
+    /* AI AUTOMATION */
+    .automation {
+      background: linear-gradient(135deg, #023e8a, #0077b6);
       color: white;
     }
 
+    .automation .section-title h2 {
+      color: white;
+    }
+
+    .automation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .automation-card {
+      background: rgba(255,255,255,0.12);
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .automation-card h3 {
+      color: #ffd60a;
+      margin-bottom: 10px;
+    }
+
+    /* ABOUT */
     .about {
-      max-width: 850px;
+      background: white;
+    }
+
+    .about-content {
+      max-width: 900px;
       margin: auto;
-      font-size: 18px;
-    }
-
-    .contact {
-      background: rgba(0, 0, 0, 0.4);
-      padding: 40px 20px;
-    }
-
-    .contact p {
-      margin: 10px 0;
-      font-size: 18px;
-    }
-
-    .whatsapp-link {
-      display: inline-block;
-      margin-top: 15px;
-      background: #25D366;
-      color: white;
-      padding: 12px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #00111f;
       text-align: center;
-      padding: 20px;
+      font-size: 18px;
     }
 
-    /* =========================
-       REGISTRATION MODAL
-       ========================= */
+    /* CONTACT */
+    .contact {
+      background: #eef6ff;
+    }
 
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .contact-box p {
+      margin: 12px 0;
+      font-size: 18px;
+    }
+
+    /* MODAL */
     .modal {
       display: none;
       position: fixed;
-      z-index: 1000;
+      z-index: 2000;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.75);
-      overflow-y: auto;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
 
     .modal-content {
       background: white;
-      color: #222;
-      width: 90%;
+      width: 100%;
       max-width: 500px;
-      margin: 40px auto;
       padding: 30px;
-      border-radius: 15px;
+      border-radius: 18px;
       position: relative;
+      animation: popup 0.3s ease;
     }
 
-    .modal-content h2 {
-      text-align: center;
-      color: #0074D9;
-      margin-bottom: 20px;
-    }
-
-    .close-btn {
-      position: absolute;
-      right: 18px;
-      top: 8px;
-      font-size: 32px;
-      color: red;
-      cursor: pointer;
-    }
-
-    form label {
-      display: block;
-      margin-top: 12px;
-      font-weight: bold;
-    }
-
-    form input,
-    form select,
-    form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 7px;
-      font-size: 16px;
-    }
-
-    form textarea {
-      height: 80px;
-      resize: vertical;
-    }
-
-    .submit-btn {
-      width: 100%;
-      margin-top: 20px;
-      padding: 14px;
-      background: #25D366;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .submit-btn:hover {
-      background: #128C7E;
-    }
-
-    .whatsapp-note {
-      text-align: center;
-      margin-top: 12px;
-      color: #555;
-      font-size: 14px;
-    }
-
-    /* =========================
-       MOBILE
-       ========================= */
-
-    @media (max-width: 600px) {
-
-      header h1 {
-        font-size: 30px;
+    @keyframes popup {
+      from {
+        transform: scale(0.7);
+        opacity: 0;
       }
 
-      header p {
-        font-size: 16px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px;
-      }
-
-      .hero {
-        padding: 50px 15px;
-      }
-
-      .hero h2 {
-        font-size: 32px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      section h2 {
-        font-size: 28px;
-      }
-
-      .modal-content {
-        margin: 20px auto;
-        padding: 25px 20px;
+      to {
+        transform: scale(1);
+        opacity: 1;
       }
     }
-  </style>
-</head>
 
-<body>
-
-  <!-- HEADER -->
-  <header>
-
-    <h1>VLSTech</h1>
-
-    <p>Technology Training & Digital Skills</p>
-
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#courses">Courses</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-  </header>
-
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-
-    <h2>Build Your Future With Technology</h2>
-
-    <p>
-      Learn practical technology skills and prepare yourself
-      for today's digital world with VLSTech.
-    </p>
-
-    <button class="register-btn" onclick="openModal()">
-      Register Now
-    </button>
-
-  </section>
-
-
-  <!-- COURSES -->
-  <section id="courses">
-
-    <h2>Our Training Programs</h2>
-
-    <div class="courses">
-
-      <div class="course">
-        <h3>CCNA</h3>
-        <p>
-          Learn networking fundamentals, IP addressing,
-          routing, switching and network security.
-        </p>
-      </div>
-
-      <div class="course">
-        <h3>MikroTik</h3>
-        <p>
-          Learn MikroTik router configuration,
-          networking, hotspot management and routing.
-        </p>
-      </div>
-
-      <div class="course">
-        <h3>AI & Programming</h3>
-        <p>
-          Learn artificial intelligence concepts,
-          programming fundamentals and practical AI tools.
-        </p>
-      </div>
-
-      <div class="course">
-        <h3>Web Development</h3>
-        <p>
-          Learn HTML, CSS and JavaScript and build
-          modern websites and web applications.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT -->
-  <section id="about">
-
-    <h2>About VLSTech</h2>
-
-    <div class="about">
-
-      <p>
-        VLSTech provides practical technology training
-        designed to help students, beginners and professionals
-        develop useful digital skills.
-      </p>
-
-      <br>
-
-      <p>
-        Our goal is to make technology education practical,
-        accessible and career-focused.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-
-    <h2>Contact VLSTech</h2>
-
-    <p>📱 WhatsApp: +234 904 286 9455</p>
-
-    <p>📧 Email: Contact VLSTech for more information</p>
-
-    <a
-      class="whatsapp-link"
-      href="https://wa.me/2349042869455"
-      target="_blank">
-      Chat With Us on WhatsApp
-    </a>
-
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    <p>
-      © 2026 VLSTech - Technology Training & Digital Skills
-    </p>
-
-  </footer>
-
-
-  <!-- =========================
-       REGISTRATION MODAL
-       ========================= -->
-
-  <div id="registrationModal" class="modal">
-
-    <div class="modal-content">
-
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-
-      <h2>VLSTech Registration</h2>
-
-      <form id="registrationForm">
-
-        <label for="name">
-          Full Name
-        </label>
-
-        <input
-          type="text"
-          id="name"
-          placeholder="Enter your full name"
-          required
-        >
-
-
-        <label for="phone">
-          Phone Number
-        </label>
-
-        <input
-          type="tel"
-          id="phone"
-          placeholder="Enter your phone number"
-          required
-        >
-
-
-        <label for="email">
-          Email Address
-        </label>
-
-        <input
-          type="email"
-          id="email"
-          placeholder="Enter your email"
-          required
-        >
-
-
-        <label for="training">
-          Select Training
-        </label>
-
-        <select id="training" required>
-
-          <option value="">
-            Choose a training program
-          </option>
-
-          <option value="CCNA">
-            CCNA
-          </option>
-
-          <option value="MikroTik">
-            MikroTik
-          </option>
-
-          <option value="AI & Programming">
-            AI & Programming
-          </option>
-
-          <option value="Web Development">
-            Web Development
-          </option>
-
-        </select>
-
-
-        <label for="message">
-          Additional Message
-        </label>
-
-        <textarea
-          id="message"
-          placeholder="Tell us anything else..."
-        ></textarea>
-
-
-        <button
-          type="submit"
-          class="submit-btn">
-          Register via WhatsApp
-        </button>
-
-        <p class="whatsapp-note">
-          Your registration details will be sent to VLSTech
-          through WhatsApp.
-        </p>
-
-      </form>
-
-    </div>
-
-  </div>
-
-
-  <!-- =========================
-       WHATSAPP AUTOMATION
-       ========================= -->
-
-  <script>
-
-    // VLSTech WhatsApp number
-    const whatsappNumber = "2349042869455";
-
-
-    // OPEN REGISTRATION FORM
-    function openModal() {
-
-      document.getElementById("registrationModal").style.display = "block";
-
-    }
-
-
-    // CLOSE REGISTRATION FORM
-    function closeModal() {
-
-      document.getElementById("registrationModal").style.display = "none";
-
-    }
-
-
-    // CLOSE WHEN CLICKING OUTSIDE THE FORM
-    window.addEventListener("click", function(event) {
-
-      const modal =
-        document.getElementById("registrationModal");
-
-      if (event.target === modal) {
-
-        closeModal();
-
-      }
-
-    });
-
-
-    // REGISTRATION FORM
-    document
-      .getElementById("registrationForm")
-      .addEventListener("submit", function(event) {
-
-        event.preventDefault();
-
-
-        // Get form information
-        const name =
-          document.getElementById("name").value.trim();
-
-        const phone =
-          document.getElementById("phone").value.trim();
-
-        const email =
-          document.getElementById("email").value.trim();
-
-        const training =
-          document.getElementById("training").value;
-
-        const message =
-          document.getElementById("message").value.trim();
-
-
-        // Create WhatsApp message
-        const whatsappMessage =
-`Hello VLSTech! 👋
-
-I want to register for a training program.
-
-👤 Full Name: ${name}
-
-📱 Phone Number: ${phone}
-
-📧 Email: ${email}
-
-🎓 Training: ${training}
-
-💬 Additional Message:
-${message || "None"}
-
-Thank you.`;
-
-
-        // Encode message for WhatsApp
-        const encodedMessage =
-          encodeURIComponent(whatsappMessage);
-
-
-        // Create WhatsApp URL
-        const whatsappURL =
-          "https://wa.me/" +
-          whatsappNumber +
-          "?text=" +
-          encodedMessage;
-
-
-        // Open WhatsApp
-        window.open(
-          whatsappURL,
-          "_blank"
-        );
-
-
-        // Clear form
-        document
-          .getElementById("registrationForm")
-          .reset();
-
-
-        // Close registration window
-        closeModal();
-
-      });
-
-  </script>
-
-</body>
-</html>
+   
